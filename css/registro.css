@@ -1,0 +1,314 @@
+/* =========================
+PÁGINA DE REGISTRO
+========================= */
+
+.register-page {
+min-height: calc(100vh - 80px);
+padding: 70px 20px;
+display: flex;
+align-items: center;
+justify-content: center;
+position: relative;
+overflow: hidden;
+}
+
+.register-container {
+width: 100%;
+max-width: 720px;
+position: relative;
+z-index: 2;
+}
+
+.register-card {
+background: rgba(255, 255, 255, 0.97);
+border: 1px solid rgba(0, 0, 0, 0.08);
+border-radius: 18px;
+padding: 45px;
+box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+}
+
+.register-header {
+text-align: center;
+margin-bottom: 35px;
+}
+
+.register-icon {
+width: 58px;
+height: 58px;
+margin: 0 auto 20px;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+border-radius: 16px;
+
+background: linear-gradient(
+    135deg,
+    #6366f1,
+    #8b5cf6
+);
+
+color: white;
+font-size: 25px;
+
+box-shadow:
+    0 10px 25px rgba(99, 102, 241, 0.3);
+
+
+}
+
+.register-header h1 {
+margin: 10px 0 12px;
+font-size: 2.2rem;
+}
+
+.register-header p {
+max-width: 520px;
+margin: 0 auto;
+color: #6b7280;
+line-height: 1.7;
+}
+
+/* =========================
+FORMULARIO
+========================= */
+
+.register-form {
+display: flex;
+flex-direction: column;
+gap: 20px;
+}
+
+.form-group {
+display: flex;
+flex-direction: column;
+gap: 8px;
+}
+
+.form-group label {
+font-weight: 600;
+color: #1f2937;
+}
+
+.form-group input {
+width: 100%;
+box-sizing: border-box;
+
+padding: 13px 15px;
+
+border: 1px solid #d1d5db;
+border-radius: 10px;
+
+background: #fff;
+color: #111827;
+
+font-size: 15px;
+
+outline: none;
+
+transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+
+
+}
+
+.form-group input:focus {
+border-color: #6366f1;
+
+box-shadow:
+    0 0 0 3px rgba(99, 102, 241, 0.12);
+
+
+}
+
+.form-group small {
+color: #9ca3af;
+font-size: 12px;
+}
+
+.form-row {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 18px;
+}
+
+/* =========================
+CHECKBOX
+========================= */
+
+.form-checkbox {
+display: flex;
+align-items: flex-start;
+gap: 10px;
+
+margin-top: 5px;
+
+
+}
+
+.form-checkbox input {
+width: 17px;
+height: 17px;
+
+margin-top: 3px;
+
+accent-color: #6366f1;
+
+
+}
+
+.form-checkbox label {
+color: #6b7280;
+font-size: 14px;
+line-height: 1.5;
+}
+
+/* =========================
+BOTÓN
+========================= */
+
+.register-button {
+width: 100%;
+border: none;
+cursor: pointer;
+
+margin-top: 5px;
+
+font-size: 15px;
+font-weight: 600;
+
+
+}
+
+/* =========================
+MENSAJE
+========================= */
+
+.form-message {
+min-height: 20px;
+margin: 0;
+
+text-align: center;
+font-size: 14px;
+
+
+}
+
+.form-message.success {
+color: #16a34a;
+}
+
+.form-message.error {
+color: #dc2626;
+}
+
+/* =========================
+LOGIN
+========================= */
+
+.login-link {
+margin-top: 30px;
+padding-top: 25px;
+
+border-top: 1px solid #e5e7eb;
+
+display: flex;
+justify-content: center;
+gap: 6px;
+
+font-size: 14px;
+
+color: #6b7280;
+
+
+}
+
+.login-link a {
+color: #6366f1;
+font-weight: 600;
+text-decoration: none;
+}
+
+.login-link a:hover {
+text-decoration: underline;
+}
+
+/* =========================
+DECORACIÓN
+========================= */
+
+.register-decoration {
+position: absolute;
+inset: 0;
+
+pointer-events: none;
+z-index: -1;
+
+
+}
+
+.register-decoration .orb {
+position: absolute;
+
+width: 300px;
+height: 300px;
+
+border-radius: 50%;
+
+filter: blur(80px);
+opacity: 0.18;
+
+
+}
+
+.register-decoration .orb-one {
+top: 10%;
+left: -100px;
+
+background: #6366f1;
+
+
+}
+
+.register-decoration .orb-two {
+right: -100px;
+bottom: 5%;
+
+background: #8b5cf6;
+
+
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media (max-width: 650px) {
+
+.register-page {
+    padding: 40px 15px;
+}
+
+.register-card {
+    padding: 30px 22px;
+    border-radius: 14px;
+}
+
+.register-header h1 {
+    font-size: 1.8rem;
+}
+
+.form-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.login-link {
+    flex-direction: column;
+    align-items: center;
+}
+
+
+}
