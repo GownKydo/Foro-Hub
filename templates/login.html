@@ -8,8 +8,8 @@
         name="description"
         content="Inicia sesión en ForoNexus y participa en nuestra comunidad."
     >
-    <link rel="stylesheet" href="/static/css/index.css">
-    <link rel="stylesheet" href="/static/css/login.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
 </head>
 
 <body class="login-page">
@@ -121,13 +121,13 @@
                 </div>
                 <p class="login-register">
                     ¿Todavía no tienes una cuenta?
-                    <a href="#">
+                    <a href="{{ url_for('registro') }}">
                         Crear una cuenta
                     </a>
                 </p>
             </div>
             <div class="login-footer">
-                <a href="/templates/index.html">
+                <a href="{{ url_for('index') }}">
                     ← Volver al foro
                 </a>
             </div>
@@ -148,6 +148,6 @@
             </span>
         </div>
     </footer>
-    <script src="/static/js/login.js"></script>
+    <script src="{{ url_for('static', filename='js/login.js') }}"></script>
 </body>
 </html>

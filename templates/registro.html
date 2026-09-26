@@ -3,8 +3,8 @@
     name="description"
     content="Crea tu cuenta en ForoNexus y forma parte de nuestra comunidad."
 >
-<link rel="stylesheet" href="/static/css/index.css">
-<link rel="stylesheet" href="/static/css/registro.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/registro.css') }}">
 
 <!-- =========================
      HEADER
@@ -12,7 +12,7 @@
 
 <header class="header">
     <div class="header-container">
-        <a href="/templates/index.html" class="logo">
+        <a href="{{ url_for('index') }}" class="logo">
             <span class="logo-icon">
                 N
             </span>
@@ -21,24 +21,24 @@
             </span>
         </a>
         <nav class="main-nav">
-            <a href="/templates/index.html">
+            <a href="{{ url_for('index') }}">
                 Inicio
             </a>
-            <a href="/templates/index.html#categorias">
+            <a href="{{ url_for('index') }}#categorias">
                 Categorías
             </a>
-            <a href="/templates/index.html#recientes">
+            <a href="{{ url_for('index') }}#recientes">
                 Recientes
             </a>
-            <a href="/templates/index.html#populares">
+            <a href="{{ url_for('index') }}#populares">
                 Populares
             </a>
         </nav>
         <div class="header-actions">
-            <a href="/templates/login.html" class="login-button">
+            <a href="{{ url_for('login') }}" class="login-button">
                 Iniciar sesión
             </a>
-            <a href="/templates/index.html" class="menu-button">
+            <a href="{{ url_for('index') }}" class="menu-button">
                 ☰
             </a>
         </div>
@@ -181,7 +181,7 @@
                 <span>
                     ¿Ya tienes una cuenta?
                 </span>
-                <a href="l/templates/ogin.html">
+                <a href="{{ url_for('login') }}">
                     Iniciar sesión
                 </a>
             </div>
@@ -205,7 +205,7 @@
 <footer class="footer">
     <div class="footer-container">
         <div class="footer-brand">
-            <a href="/templates/index.html" class="logo">
+            <a href="{{ url_for('index') }}" class="logo">
                 <span class="logo-icon">
                     N
                 </span>
@@ -223,13 +223,13 @@
                 <h4>
                     Foro
                 </h4>
-                <a href="/templates/index.html#categorias">
+                <a href="{{ url_for('index') }}#categorias">
                     Categorías
                 </a>
-                <a href="/templates/index.html#recientes">
+                <a href="{{ url_for('index') }}#recientes">
                     Temas recientes
                 </a>
-                <a href="/templates/index.html#populares">
+                <a href="{{ url_for('index') }}#populares">
                     Temas populares
                 </a>
             </div>
@@ -258,4 +258,4 @@
         </span>
     </div>
 </footer>
-<script src="/static/js/registro.js"></script>
+<script src="{{ url_for('static', filename='js/registro.js') }}"></script>

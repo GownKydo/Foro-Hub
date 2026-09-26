@@ -8,7 +8,7 @@
         name="description"
         content="Un espacio para conversar sobre historia, anime, videojuegos, tecnología y mucho más."
     >
-    <link rel="stylesheet" href="/static/css/index.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
 </head>
 
 <body>
@@ -18,14 +18,14 @@
 
     <header class="header">
         <div class="header-container">
-            <a href="#" class="logo">
+            <a href="{{ url_for('index') }}" class="logo">
                 <span class="logo-icon">N</span>
                 <span class="logo-text">
                     Foro<span>Nexus</span>
                 </span>
             </a>
             <nav class="main-nav" id="mainNav">
-                <a href="#" class="active">Inicio</a>
+                <a href="{{ url_for('index') }}" class="active">Inicio</a>
                 <a href="#categorias">Categorías</a>
                 <a href="#recientes">Recientes</a>
                 <a href="#populares">Populares</a>
@@ -38,7 +38,7 @@
                 >
                     🔍
                 </button>
-                <a href="login.html" class="login-button">
+                <a href="{{ url_for('login') }}" class="login-button">
                     Iniciar sesión
                 </a>
                 <button
@@ -91,8 +91,7 @@
                     <a href="#categorias" class="button primary">
                         Explorar foro
                     </a>
-                    <!-- ENLACE A REGISTRO -->
-                    <a href="registro.html" class="button secondary">
+                    <a href="{{ url_for('registro') }}" class="button secondary">
                         Crear una cuenta
                     </a>
                 </div>
@@ -453,8 +452,7 @@
                         Crea una cuenta para participar,
                         publicar temas y conocer otros miembros.
                     </p>
-                    <!-- ENLACE A REGISTRO -->
-                    <a href="registro.html" class="button primary full">
+                    <a href="{{ url_for('registro') }}" class="button primary full">
                         Registrarme
                     </a>
                 </section>
@@ -469,7 +467,7 @@
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-brand">
-                <a href="#" class="logo">
+                <a href="{{ url_for('index') }}" class="logo">
                     <span class="logo-icon">
                         N
                     </span>
@@ -506,6 +504,6 @@
             </span>
         </div>
     </footer>
-    <script src="/static/js/index.js"></script>
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
 </body>
 </html>
