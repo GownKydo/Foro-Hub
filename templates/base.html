@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Foro</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <nav>
+        <a href="/">Inicio</a>
+        <a href="/login">Entrar</a>
+    </nav>
+    <!-- Aquí se inyectará el contenido de las otras páginas -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>Derechos reservados</footer>
+</body>
+</html>
