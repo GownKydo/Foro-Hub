@@ -1,55 +1,12 @@
-<title>Crear cuenta | ForoNexus</title>
-<meta
-    name="description"
-    content="Crea tu cuenta en ForoNexus y forma parte de nuestra comunidad."
->
-<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
-<link rel="stylesheet" href="{{ url_for('static', filename='css/registro.css') }}">
+{% extends "base.html" %}
+{% block title %}Crear cuenta | ForoNexus{% endblock %}
 
-<!-- =========================
-     HEADER
-========================== -->
+{% block extra_css %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/registro.css') }}">
+{% endblock %}
 
-<header class="header">
-    <div class="header-container">
-        <a href="{{ url_for('index') }}" class="logo">
-            <span class="logo-icon">
-                N
-            </span>
-            <span class="logo-text">
-                Foro<span>Nexus</span>
-            </span>
-        </a>
-        <nav class="main-nav">
-            <a href="{{ url_for('index') }}">
-                Inicio
-            </a>
-            <a href="{{ url_for('index') }}#categorias">
-                Categorías
-            </a>
-            <a href="{{ url_for('index') }}#recientes">
-                Recientes
-            </a>
-            <a href="{{ url_for('index') }}#populares">
-                Populares
-            </a>
-        </nav>
-        <div class="header-actions">
-            <a href="{{ url_for('login') }}" class="login-button">
-                Iniciar sesión
-            </a>
-            <a href="{{ url_for('index') }}" class="menu-button">
-                ☰
-            </a>
-        </div>
-    </div>
-</header>
-
-<!-- =========================
-     REGISTRO
-========================== -->
-
-<main class="register-page">
+{% block content %}
+<div class="register-page">
     <section class="register-container">
         <div class="register-card">
             <div class="register-header">
@@ -174,6 +131,7 @@
                     aria-live="polite"
                 ></p>
             </form>
+
             <!-- =========================
                  LOGIN
             ========================== -->
@@ -186,6 +144,7 @@
                 </a>
             </div>
         </div>
+
         <!-- =========================
              DECORACIÓN
         ========================== -->
@@ -195,67 +154,9 @@
             <div class="grid-decoration"></div>
         </div>
     </section>
-</main>
+</div>
+{% endblock %}
 
-
-<!-- =========================
-     FOOTER
-========================== -->
-
-<footer class="footer">
-    <div class="footer-container">
-        <div class="footer-brand">
-            <a href="{{ url_for('index') }}" class="logo">
-                <span class="logo-icon">
-                    N
-                </span>
-                <span class="logo-text">
-                    Foro<span>Nexus</span>
-                </span>
-            </a>
-            <p>
-                Un espacio para compartir ideas,
-                conocimientos y pasiones.
-            </p>
-        </div>
-        <div class="footer-links">
-            <div>
-                <h4>
-                    Foro
-                </h4>
-                <a href="{{ url_for('index') }}#categorias">
-                    Categorías
-                </a>
-                <a href="{{ url_for('index') }}#recientes">
-                    Temas recientes
-                </a>
-                <a href="{{ url_for('index') }}#populares">
-                    Temas populares
-                </a>
-            </div>
-            <div>
-                <h4>
-                    Comunidad
-                </h4>
-                <a href="#">
-                    Miembros
-                </a>
-                <a href="#">
-                    Reglas
-                </a>
-                <a href="#">
-                    Ayuda
-                </a>
-            </div>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <span>
-            © 2026 ForoNexus
-        </span>
-        <span>
-            Hecho para una comunidad de curiosos.
-        </span>
-    </div>
-</footer>
-<script src="{{ url_for('static', filename='js/registro.js') }}"></script>
+{% block scripts %}
+    <script src="{{ url_for('static', filename='js/registro.js') }}"></script>
+{% endblock %}

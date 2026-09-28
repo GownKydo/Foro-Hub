@@ -1,57 +1,12 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foro Nexus</title>
-    <meta
-        name="description"
-        content="Un espacio para conversar sobre historia, anime, videojuegos, tecnología y mucho más."
-    >
+{% extends "base.html" %}
+{% block title %}Inicio | ForoNexus{% endblock %}
+
+{% block extra_css %}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
-</head>
+{% endblock %}
 
-<body>
-    <!-- =========================
-         HEADER
-    ========================== -->
-
-    <header class="header">
-        <div class="header-container">
-            <a href="{{ url_for('index') }}" class="logo">
-                <span class="logo-icon">N</span>
-                <span class="logo-text">
-                    Foro<span>Nexus</span>
-                </span>
-            </a>
-            <nav class="main-nav" id="mainNav">
-                <a href="{{ url_for('index') }}" class="active">Inicio</a>
-                <a href="#categorias">Categorías</a>
-                <a href="#recientes">Recientes</a>
-                <a href="#populares">Populares</a>
-            </nav>
-            <div class="header-actions">
-                <button
-                    class="search-button"
-                    id="searchButton"
-                    aria-label="Buscar"
-                >
-                    🔍
-                </button>
-                <a href="{{ url_for('login') }}" class="login-button">
-                    Iniciar sesión
-                </a>
-                <button
-                    class="menu-button"
-                    id="menuButton"
-                    aria-label="Abrir menú"
-                >
-                    ☰
-                </button>
-            </div>
-        </div>
-    </header>
-
+{% block content %}
+    <body>
     <!-- =========================
          SEARCH
     ========================== -->
@@ -459,51 +414,8 @@
             </aside>
         </div>
     </main>
+{% endblock %}
 
-    <!-- =========================
-         FOOTER
-    ========================== -->
-
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-brand">
-                <a href="{{ url_for('index') }}" class="logo">
-                    <span class="logo-icon">
-                        N
-                    </span>
-                    <span class="logo-text">
-                        Foro<span>Nexus</span>
-                    </span>
-                </a>
-                <p>
-                    Un espacio para compartir ideas,
-                    conocimientos y pasiones.
-                </p>
-            </div>
-            <div class="footer-links">
-                <div>
-                    <h4>Foro</h4>
-                    <a href="#">Categorías</a>
-                    <a href="#">Temas recientes</a>
-                    <a href="#">Temas populares</a>
-                </div>
-                <div>
-                    <h4>Comunidad</h4>
-                    <a href="#">Miembros</a>
-                    <a href="#">Reglas</a>
-                    <a href="#">Ayuda</a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <span>
-                © 2026 ForoNexus
-            </span>
-            <span>
-                Hecho para una comunidad de curiosos.
-            </span>
-        </div>
-    </footer>
+{% block scripts %}
     <script src="{{ url_for('static', filename='js/index.js') }}"></script>
-</body>
-</html>
+{% endblock %}
