@@ -55,47 +55,6 @@
 }
 
 /* =========================
-   DECORACIÓN (LUCES AMBIENTALES Y GRID)
-========================= */
-
-.login-decoration {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    overflow: hidden;
-}
-.login-decoration .orb {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(90px);
-    opacity: 0.35;
-}
-.login-decoration .orb-one {
-    width: 350px;
-    height: 350px;
-    top: 8%;
-    left: 10%;
-    background: var(--primary-dark);
-}
-.login-decoration .orb-two {
-    width: 380px;
-    height: 380px;
-    right: 8%;
-    bottom: 2%;
-    background: var(--primary-light);
-}
-.login-decoration .grid-decoration {
-    position: absolute;
-    inset: 0;
-    opacity: 0.08;
-    background-image:
-        linear-gradient(var(--border-light) 1px, transparent 1px),
-        linear-gradient(90deg, var(--border-light) 1px, transparent 1px);
-    background-size: 45px 45px;
-    mask-image: radial-gradient(ellipse at center, black, transparent 70%);
-}
-
-/* =========================
    LOGIN CONTAINER
 ========================= */
 

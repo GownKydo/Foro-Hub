@@ -224,38 +224,6 @@ LOGIN
 }
 
 /* =========================
-DECORACIÓN (LUCES AMBIENTALES RGB)
-========================= */
-
-.register-decoration {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    z-index: 1;
-}
-
-.register-decoration .orb {
-    position: absolute;
-    width: 350px;
-    height: 350px;
-    border-radius: 50%;
-    filter: blur(90px);
-    opacity: 0.35;
-}
-
-.register-decoration .orb-one {
-    top: 10%;
-    left: -100px;
-    background: var(--primary-dark);
-}
-
-.register-decoration .orb-two {
-    right: -100px;
-    bottom: 5%;
-    background: var(--primary-light);
-}
-
-/* =========================
 RESPONSIVE
 ========================= */
 
