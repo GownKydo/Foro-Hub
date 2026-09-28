@@ -1,22 +1,14 @@
-from flask import Flask, render_template
+import os
+from flask import Flask
+from routes import init_routes
 
-# Inicializamos la aplicación de Flask
 app = Flask(__name__)
 
-# Rutas para las paginas
-@app.route('/')
-def index():
-    return render_template('index.html')
+# Llave secreta requerida para manejar sesiones de usuario y formularios
+app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'nexus_clave_secreta_desarrollo')
 
-@app.route('/login')
-def login():
-    return render_template('login.html')
+# Vinculamos las rutas directamente
+init_routes(app)
 
-@app.route('/registro')
-def registro():
-    return render_template('registro.html')
-
-
-# Bloque principal para arrancar el servidor
 if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+    app.run(host='0.0.0.0', port=5000, debug=True)
