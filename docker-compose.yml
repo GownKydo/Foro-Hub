@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   web:
     build: .
@@ -28,7 +26,6 @@ services:
     ports:
       - "3306:3306"
     volumes:
-      # Guarda los datos de la base de datos para que no se borren si el contenedor se apaga
       - mysql_data:/var/lib/mysql
 
 volumes:
